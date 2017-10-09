@@ -37,157 +37,82 @@
         <div class="col-md-8">
           <h2>Intermolecular Potential Energy Surfaces</h2>
 
-          <h3>Atom plus Linear-molecule complexes <a name="la"></a> </h3>
-          <!--{{{-->
 
-          <div class="panel-group" id="al" role="tablist" aria-multiselectable="true">
-
+          <div class="panel-group" id="vdw" role="tablist" aria-multiselectable="true">
+            <h3>Atom plus Linear-molecule complexes <a name="la"></a> </h3>
 
             <!--{{{-->
-
-
             <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="heading-co2he">
+              <div class="panel-heading" role="tab" id="heading-co2he" role="button" data-toggle="collapse" data-parent="#vdw" href="#content-co2he" aria-expanded="false" aria-controls="content-co2he">
                 <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#al" href="#content-co2he" aria-expanded="false" aria-controls="content-co2he">
-                    CO<sub>2</sub>-He
-                  </a>
+                  CO<sub>2</sub>-He
                 </h4>
               </div>
               <div id="content-co2he" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-co2he">
                 <div class="panel-body">
-                  <p><b>Language</b> Fortran</p>
-                  <pre><code class="Fortran">      subroutine pes_co2he_3d(q1,q3,th1,th2,v) </code></pre>
-                  <p><b>Varibales</b></p>
-                  <p>Input</p>
-                  <ul>
-                    <li><code>q1</code> <i>Q</i><sub>1</sub> normal coordinate of CO<sub>2</sub> molecule in Å;</li>
-                  </ul>
-                  <p>Output</p>
-                  <ul>
-                    <li><code>v</code> Intermolecular interaction Δ<i>V</i> in cm<sup>-1</sup>.</li>
-                  </ul>
-                  <p><b>Reference</b> Hui Li and Robert J. Le Roy <i>Phys. Chem. Chem. Phys.</i> <b>10</b> 4128 (2008) <a href="https://doi.org/10.1039/B800718G ">doi:10.1039/B800718G </a></p>
+                  <p><b>Reference</b> Hui Li, and Robert J. Le Roy, <i>Phys. Chem. Chem. Phys.</i>, <b>10</b>, 4128 (2008) <a href="https://doi.org/10.1039/B800718G ">doi:10.1039/B800718G </a></p>
                   <button type="button" class="btn btn-primary">Get PES</button>
                 </div>
               </div>
             </div>
-
-
-
 
             <!--}}}-->
 
             <!--{{{-->
-
-
             <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="heading-ocshe">
+              <div class="panel-heading" role="tab" id="heading-ocshe" role="button" data-toggle="collapse" data-parent="#vdw" href="#content-ocshe" aria-expanded="false" aria-controls="content-ocshe">
                 <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#al" href="#content-ocshe" aria-expanded="false" aria-controls="content-ocshe">
-                    OCS-He
-                  </a>
+                  OCS-He
                 </h4>
               </div>
               <div id="content-ocshe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ocshe">
                 <div class="panel-body">
-                  <p><b>Language</b> Fortran</p>
-                  <pre><code class="Fortran">      subroutine pes_co2he_3d(q1,q3,th1,th2,v) </code></pre>
-                  <p><b>Varibales</b></p>
-                  <p>Input</p>
-                  <ul>
-                    <li><code>q1</code> <i>Q</i><sub>1</sub> normal coordinate of CO<sub>2</sub> molecule in Å;</li>
-                  </ul>
-                  <p>Output</p>
-                  <ul>
-                    <li><code>v</code> Intermolecular interaction Δ<i>V</i> in cm<sup>-1</sup>.</li>
-                  </ul>
-                  <p><b>Reference</b> Hui Li and Robert J. Le Roy <i>Phys. Chem. Chem. Phys.</i> <b>10</b> 4128 (2008) <a href="https://doi.org/10.1039/B800718G ">doi:10.1039/B800718G </a></p>
-                  <button type="button" class="btn btn-primary">Get PES</button>
                 </div>
               </div>
             </div>
-
-
-
-
             <!--}}}-->
 
 
+            <h3>Atom plus Non-linear-molecule complexes  </h3>
+
+
+
+            <h3>Linear-molecule plus Linear-molecule complexes </h3>
+
+
+            <!--{{{-->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading-coh2" role="button" data-toggle="collapse" data-parent="#vdw" href="#content-coh2" aria-expanded="false" aria-controls="content-coh2">
+                <h4 class="panel-title">
+                  CO-H<sub>2</sub>
+                </h4>
+              </div>
+              <div id="content-coh2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-coh2">
+                <div class="panel-body">
+                  <p><b>Language</b> Fortran</p>
+                  <pre><code class="Fortran">      SUBROUTINE COH2PES(XPHI,XTH1,XTH2,XR,V,iv3) </code></pre>
+                  <p><b>Varibales</b></p>
+                  <img src="./img/coh2.svg" style="float:right;"> <!--style="width:width;height:height;"--> 
+                  <p>Input</p>
+                  <ul>
+                    <li><code>XR</code> Magnitude of the vector <b>R</b> pointing from center of mass of CO to center of mass of H<sub>2</sub>, in Angstrom;</li>
+                    <li><code>XPHI</code> Dihedral angle <i>φ</i> formed by the two half-planes, in Degree;</li>
+                    <li><code>XTH1</code> Angle <i>θ</i><sub>1</sub> between vector <b>R</b> and vector OC, in Degree;</li>
+                    <li><code>XTH2</code> Angle <i>θ</i><sub>2</sub> between vector <b>R</b> and vector H<sup>(2)</sup>H<sup>(1)</sup>, in Degree;</li>
+                    <li><code>iv3</code> Vibrational quantum number of CO, 0 for vibrational ground state and 1 for vibrational first excited state.</li>
+                  </ul>
+                  <p>Output</p>
+                  <ul>
+                    <li><code>V</code> Intermolecular interaction Δ<i>V</i>, in cm<sup>-1</sup>.</li>
+                  </ul>
+                  <p><b>Reference</b> Hui Li, Xiao-Long Zhang, Robert J. Le Roy, and Pierre-Nicholas Roy, <i>J. Chem. Phys.</i>, <b>139</b>, 164315 (2013) <a href="https://doi.org/10.1063/1.4826595 ">doi:10.1063/1.4826595 </a></p>
+                  <a href="https://raw.githubusercontent.com/huili-group/mdMLR/master/src/co-h2.f" ><button type="button" class="btn btn-primary">Get PES</button></a>
+                </div>
+              </div>
+            </div>
+            <!--}}}-->
+
           </div>
-
-
-
-
-          <!--}}}-->
-
-
-          <h3>Atom plus Non-linear-molecule complexes <a name="na"></a> </h3>
-
-
-
-          <h3>Linear-molecule plus Linear-molecule complexes <a name="ll"></a> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!--}}}-->
-
-
-          <h3>Atom plus Non-linear-molecule complexes <a name="na"></a> </h3>
-
-
-
-          <h3>Linear-molecule plus Linear-molecule complexes <a name="ll"></a> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -196,10 +121,10 @@
           <h3>Models and Theories</h3>
           <h4>Prototype of mdMLR: The Morse/Long-Range Model</h4>
           <ul>
-            <li><i>J. Chem. Phys.</i> <b>131</b> 204309 (2009) <a href="http://doi.org/10.1063/1.3264688">doi:10.1063/1.3264688</a></li>
-            <li><i>J. Chem. Phys.</i> <b>125</b> 164310 (2006) <a href="http://doi.org/10.1063/1.2354502">doi:10.1063/1.2354502</a></li>
-            <li><i>Mol. Phys.</i> <b>105</b> 663 (2007) <a href="http://doi.org/10.1080/00268970701241656">doi:10.1080/00268970701241656</a></li>
-            <li><i>Mol. Phys.</i> <b>109</b> 435 (2011) <a href="http://doi.org/10.1080/00268976.2010.527304">doi:10.1080/00268976.2010.527304</a></li>
+            <li><i>J. Chem. Phys.</i>, <b>131</b>, 204309 (2009) <a href="http://doi.org/10.1063/1.3264688">doi:10.1063/1.3264688</a></li>
+            <li><i>J. Chem. Phys.</i>, <b>125</b>, 164310 (2006) <a href="http://doi.org/10.1063/1.2354502">doi:10.1063/1.2354502</a></li>
+            <li><i>Mol. Phys.</i>, <b>105</b>, 663 (2007) <a href="http://doi.org/10.1080/00268970701241656">doi:10.1080/00268970701241656</a></li>
+            <li><i>Mol. Phys.</i>, <b>109</b>, 435 (2011) <a href="http://doi.org/10.1080/00268976.2010.527304">doi:10.1080/00268976.2010.527304</a></li>
 
           </ul>
           <h3>Links</h3>
