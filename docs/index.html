@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/styles/github.css">
     <title>mdMLR vdW Complexes PES bank</title>
   </head>
-
   <body>
     <div class="container">
       <div class="page-header">
@@ -50,6 +49,20 @@
               </div>
               <div id="content-co2he" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-co2he">
                 <div class="panel-body">
+                  <p><b>Language</b> Fortran</p>
+                  <pre><code class="Fortran">      SUBROUTINE CO2He3dPES(RR1,RR2,TH,V) </code></pre>
+                  <p><b>Varibales</b></p>
+                  <img src="./img/co2he.svg" style="float:right;"> 
+                  <p>Input</p>
+                  <ul>
+                    <li><code>RR1</code> Magnitude of the vector <b>R</b> pointing from center of mass of CO<sub>2</sub> to He, in Angstrom;</li>
+                    <li><code>RR2</code> <i>Q</i><sub>3</sub> asymmetric stretching of CO<sub>2</sub> molecule, defined as <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <msub> <mi>Q</mi> <mn>3</mn> </msub> <mo>=</mo> <mo stretchy="false">(</mo> <msub> <mi>r</mi> <mrow class="MJX-TeXAtom-ORD"> <mi mathvariant="normal">C</mi> <msup> <mi mathvariant="normal">O</mi> <mrow class="MJX-TeXAtom-ORD"> <mo stretchy="false">(</mo> <mn>1</mn> <mo stretchy="false">)</mo> </mrow> </msup> </mrow> </msub> <mo>&#x2212;<!-- − --></mo> <msub> <mi>r</mi> <mrow class="MJX-TeXAtom-ORD"> <mi mathvariant="normal">C</mi> <msup> <mi mathvariant="normal">O</mi> <mrow class="MJX-TeXAtom-ORD"> <mo stretchy="false">(</mo> <mn>2</mn> <mo stretchy="false">)</mo> </mrow> </msup> </mrow> </msub> <mo stretchy="false">)</mo> <mrow class="MJX-TeXAtom-ORD"> <mo>/</mo> </mrow> <msqrt> <mn>2</mn> </msqrt> </math>, in Angstrom;</li>
+                      <li><code>TH</code> Angle <i>θ</i> between vector <b>R</b> and vector O<sup>(2)</sup>O<sup>(1)</sup>, in Degree;</li>
+                  </ul>
+                  <p>Output</p>
+                  <ul>
+                    <li><code>V</code> Intermolecular interaction Δ<i>V</i>, in cm<sup>-1</sup>.</li>
+                  </ul>
                   <p><b>Reference</b> Hui Li, and Robert J. Le Roy, <i>Phys. Chem. Chem. Phys.</i>, <b>10</b>, 4128 (2008) <a href="https://doi.org/10.1039/B800718G ">doi:10.1039/B800718G </a></p>
                   <button type="button" class="btn btn-primary">Get PES</button>
                 </div>
@@ -140,7 +153,7 @@
           <hr/>
           <p align="center">Copyright © 2017 Profs. Hui Li Research Group</p>
           <p align="center">This database is supported by<br/> <b>the National Natural Science Foundation of China</b>,<br/><b>National Key Research Development Program of China</b>, <br/>and <b>the Natural Sciences and Engineering Council of Canada</b>.</p>
-          <p align="center">Proudly powered by <a href="http://getbootstrap.com/">Bootstrap</a></p>
+          <p align="center"><small>Proudly powered by <a href="http://getbootstrap.com/">Bootstrap</a></small></p>
         </div>
       </div>
     </div>
@@ -149,6 +162,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <!-- <script type="text/javascript" async src="./js/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
   </body>
 
 </html> 
