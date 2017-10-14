@@ -76,6 +76,39 @@
 
             <h3>Atom plus Non-linear-molecule complexes  </h3>
 
+            <!--{{{-->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading-h2ohe" role="button" data-toggle="collapse" data-parent="#vdw" href="#content-h2ohe" aria-expanded="false" aria-controls="content-h2ohe">
+                <h4 class="panel-title">
+                  H<sub>2</sub>O-He
+                </h4>
+              </div>
+              <div id="content-h2ohe" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-h2ohe">
+                <div class="panel-body">
+                  <p><b>Language</b> Fortran</p>
+                  <pre><code class="Fortran">      SUBROUTINE H2OHe_3DPES(XPHI,TH,RR,V,iv) </code></pre>
+                  <p><b>Varibales</b></p>
+                  <img src="./img/h2ohe.svg" style="float:right;"> 
+                  <p>Input</p>
+                  <ul>
+                    <li><code>RR</code> Magnitude of the vector <b>R</b> pointing from center of mass of H<sub>2</sub>O to He, in Angstrom;</li>
+                    <li><code>TH</code> Angle <i>θ</i> between vector <b>R</b> and vector XO, X the center of mass of water, in Degree;</li>
+                    <li><code>XR</code> Magnitude of the vector <b>R</b> pointing from center of mass of CO to center of mass of H<sub>2</sub>, in Angstrom;</li>
+                    <li><code>XPHI</code> Dihedral angle <i>φ</i> formed by the plane in which the water molecule is and plane OXHe, in Degree;</li>
+                    <li><code>iv</code> Vibrational state of water.  iv=1: ground state; iv=2: first excitation on <i>v</i><sub>1</sub>; iv=3: first excitation on <i>v</i><sub>2</sub>; iv=4: first excitation on <i>v</i><sub>3</sub>;</li>
+                  </ul>
+                  <p>Output</p>
+                  <ul>
+                    <li><code>V</code> Intermolecular interaction Δ<i>V</i>, in cm<sup>-1</sup>.</li>
+                  </ul>
+                  <p><b>Reference</b> Dan Hou, Yong-Tao Ma, Xiao-Long Zhang, and Hui Li, <i>J. Mol. Spectr.</i>, <b>330</b>, 217 (2016) <a href="https://doi.org/10.1016/j.jms.2016.07.009 ">doi:10.1016/j.jms.2016.07.009 </a></p>
+                  <button type="button" class="btn btn-primary">Get PES</button>
+                </div>
+              </div>
+            </div>
+
+            <!--}}}-->
+
 
 
             <h3>Linear-molecule plus Linear-molecule complexes </h3>
